@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Bashboard</title>
+    <!-- <link rel="stylesheet" type="text/css" href="./assets/css/style.css" /> -->
+    <link rel="stylesheet" href="./assets/style.css">
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  </head>
+<body>
+    <header class = "text-center ">
+        <h1 class = "p-2">Weather Dashboard</h1>
+    </header>
+    <section class = "row">
+      <aside class="ml-1 col-3 border-bottom border-dark">
+         <h2 class = "text-center">Search fo a City:</h2>
+         <input class = "city-input pt-2 pb-2 col pt-2"></input>
+         <button class = "searchbtn col pt-1 pb-1 mb-3 mt-2">Search</button>
+       </aside>
+        <div class="col-8 ml-3 border border-dark">
+            <h2 id="cityNameDate"></h2>
+            <img id="weather-icon" src=""  alt="Weather Icon">
+            <p id = "current-temp">Temp:</p>
+            <p id = "current-wind">Wind:</p>
+            <P id = "current-humidity">Humidity:</P>
+        </div>
+    </section>
+    <section class = "row">
+        <div id = "past-city-search" class = " col col-3 pt-1 pb-1 mb-3 mt-2" id="btncontainer">
+        </div>
+        <div class = "row col-8" id = "cardcontainer">
+            <div class = "forcastcard col-2  m-2" id = "day1-forcast">
+                <h4 id="day1Date"></h4>
+                <img id="weather-icon1" src=""  alt="Weather Icon">
+                <p id = "current-temp1">Temp:</p>
+                <p id = "current-wind1">Wind:</p>
+                <P id = "current-humidity1">Humidity:</P>
+            </div>
+            <div class = "forcastcard col-2 m-2" id = "day2-forcast">
+                <h4 id="day2Date"></h4>
+                <img id="weather-icon2" src=""  alt="Weather Icon">
+                <p id = "current-temp2">Temp:</p>
+                <p id = "current-wind2">Wind:</p>
+                <P id = "current-humidity2">Humidity:</P>
+            </div>
+            <div class = "forcastcard col-2 m-2" id = "day3-forcast">
+                <h4 id="day3Date"></h4>
+                <img id="weather-icon3" src=""  alt="Weather Icon">
+                <p id = "current-temp3">Temp:</p>
+                <p id = "current-wind3">Wind:</p>
+                <P id = "current-humidity3">Humidity:</P>
+            </div>
+            <div class = "forcastcard col-2 m-2" id = "day4-forcast">
+                <h4 id="day4Date"></h4>
+                <img id="weather-icon4" src=""  alt="Weather Icon">
+                <p id = "current-temp4">Temp:</p>
+                <p id = "current-wind4">Wind:</p>
+                <P id = "current-humidity4">Humidity:</P>
+            </div>
+            <div class = "forcastcard col-2 m-2" id = "day5-forcast">
+                <h4 id="day5Date"></h4>
+                <img id="weather-icon5" src=""  alt="Weather Icon">
+                <p id = "current-temp5">Temp:</p>
+                <p id = "current-wind5">Wind:</p>
+                <P id = "current-humidity5">Humidity:</P>
+            </div>
+        </div>
+    </section>
+<script src="./assets/script.js"></script>
+</body>  
+</html>

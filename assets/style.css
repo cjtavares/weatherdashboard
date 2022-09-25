@@ -1,0 +1,14 @@
+header{
+    background: linear-gradient(to right, rgb(119, 135, 207) 0%, rgb(9, 9, 134) 100%);
+    color: white;
+}
+button{
+    background-color: rgb(103, 158, 190);
+    color: white;
+    border-color: white;
+}
+
+.forcastcard{
+    background-color: rgb(17, 27, 71); 
+    color: white;
+}
