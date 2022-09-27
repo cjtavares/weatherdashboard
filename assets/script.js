@@ -5,7 +5,7 @@ city = cityPull;
 
 //Last City searched displayed when reloading page
 
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=imperial";
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=imperial";
 var todaysDate = moment().format("M/D/YY")
 fetch(queryURL)
   .then(function (response) {
@@ -14,7 +14,7 @@ fetch(queryURL)
   .then(function (data) {
     console.log(data);
     // console.log(data.weather[0].icon)
-    var weatherIcon = src = "http://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
+    var weatherIcon = src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
     document.getElementById("weather-icon").src = weatherIcon;
     var cityNameDate = document.getElementById("cityNameDate");
    cityNameDate.textContent = (data.name +" ("+ todaysDate + ")"); 
@@ -26,7 +26,7 @@ fetch(queryURL)
    currentTemp.textContent = ("Humidity: " + data.main.humidity + "%")
   });
 
-  var queryForcastURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + apiKey + "&units=imperial";
+  var queryForcastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + apiKey + "&units=imperial";
 
 fetch(queryForcastURL)
   .then(function (response) {
@@ -62,7 +62,7 @@ fetch(queryForcastURL)
         }
 
         for (var i = 1; i <= 5; i ++){
-            var weatherIcon = src = "http://openweathermap.org/img/wn/" + data.list[i*8-1].weather[0].icon + ".png";
+            var weatherIcon = src = "https://openweathermap.org/img/wn/" + data.list[i*8-1].weather[0].icon + ".png";
             document.body.children[2].children[1].children[i-1].children[1].src = weatherIcon;   
         }
 
@@ -78,7 +78,7 @@ searchBtn.addEventListener("click", function(){
     var cityQuery = document.querySelector(".city-input")
     var cityValue = cityQuery.value
     city = cityValue
-var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=imperial";
+var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=imperial";
 var todaysDate = moment().format("M/D/YY")
 fetch(queryURL)
   .then(function (response) {
@@ -88,7 +88,7 @@ fetch(queryURL)
     console.log(data);
     localStorage.setItem("city", data.name)
     // console.log(data.weather[0].icon)
-    var weatherIcon = src = "http://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
+    var weatherIcon = src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
     document.getElementById("weather-icon").src = weatherIcon;
     var cityNameDate = document.getElementById("cityNameDate");
    cityNameDate.textContent = (data.name +" ("+ todaysDate + ")"); 
@@ -100,7 +100,7 @@ fetch(queryURL)
    currentTemp.textContent = ("Humidity: " + data.main.humidity + "%")
   });
 
-  var queryForcastURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + apiKey + "&units=imperial";
+  var queryForcastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + apiKey + "&units=imperial";
 
 fetch(queryForcastURL)
   .then(function (response) {
@@ -129,7 +129,7 @@ fetch(queryForcastURL)
 
    
          
-        var weatherIcon = src = "http://openweathermap.org/img/wn/" + data.list[7].weather[0].icon + ".png";
+        var weatherIcon = src = "https://openweathermap.org/img/wn/" + data.list[7].weather[0].icon + ".png";
         document.getElementById("weather-icon1").src = weatherIcon; 
         console.log(weatherIcon);
     
@@ -143,7 +143,7 @@ fetch(queryForcastURL)
     }
 
     for (var i = 1; i <= 5; i ++){
-        var weatherIcon = src = "http://openweathermap.org/img/wn/" + data.list[i*8-1].weather[0].icon + ".png";
+        var weatherIcon = src = "https://openweathermap.org/img/wn/" + data.list[i*8-1].weather[0].icon + ".png";
         document.body.children[2].children[1].children[i-1].children[1].src = weatherIcon;   
     }
 
@@ -213,7 +213,7 @@ searchCityHistoryBtn.addEventListener("click", function(event){
     var cityValue = event.target.value
     city = cityValue
     console.log(cityValue)
-var querycityhistoryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=imperial";
+var querycityhistoryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=imperial";
 var todaysDate = moment().format("M/D/YY")
 fetch(querycityhistoryURL)
   .then(function (response) {
@@ -223,7 +223,7 @@ fetch(querycityhistoryURL)
     console.log(data);
     localStorage.setItem("city", data.name)
     // console.log(data.weather[0].icon)
-    var weatherIcon = src = "http://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
+    var weatherIcon = src = "https://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png";
     document.getElementById("weather-icon").src = weatherIcon;
     var cityNameDate = document.getElementById("cityNameDate");
    cityNameDate.textContent = (data.name +" ("+ todaysDate + ")"); 
@@ -235,7 +235,7 @@ fetch(querycityhistoryURL)
    currentTemp.textContent = ("Humidity: " + data.main.humidity + "%")
   });
 
-  var queryForcastURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + apiKey + "&units=imperial";
+  var queryForcastURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + apiKey + "&units=imperial";
 
 fetch(queryForcastURL)
   .then(function (response) {
@@ -264,7 +264,7 @@ fetch(queryForcastURL)
 
    
          
-        var weatherIcon = src = "http://openweathermap.org/img/wn/" + data.list[7].weather[0].icon + ".png";
+        var weatherIcon = src = "https://openweathermap.org/img/wn/" + data.list[7].weather[0].icon + ".png";
         document.getElementById("weather-icon1").src = weatherIcon; 
         console.log(weatherIcon);
     
@@ -278,7 +278,7 @@ fetch(queryForcastURL)
     }
 
     for (var i = 1; i <= 5; i ++){
-        var weatherIcon = src = "http://openweathermap.org/img/wn/" + data.list[i*8-1].weather[0].icon + ".png";
+        var weatherIcon = src = "https://openweathermap.org/img/wn/" + data.list[i*8-1].weather[0].icon + ".png";
         document.body.children[2].children[1].children[i-1].children[1].src = weatherIcon;   
     }
 
